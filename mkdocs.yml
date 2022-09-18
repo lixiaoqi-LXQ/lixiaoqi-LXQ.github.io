@@ -1,0 +1,8 @@
+site_name: Qlog
+site_url: https://baidu.com/
+nav:
+  - D: index.md
+  - Q: about.md
+theme: material
+
+
