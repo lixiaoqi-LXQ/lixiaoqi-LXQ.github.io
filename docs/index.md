@@ -1,4 +1,5 @@
 # LIXIAOQI
+
 # Welcome to MkDocs
 
 > hello world!
@@ -13,6 +14,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 * `mkdocs -h` - Print help message and exit.
 
 ## Project layout
+
 ```
     mkdocs.yml    # The configuration file.
     docs/
