@@ -1,8 +1,26 @@
+# Info
 site_name: Qlog
-site_url: https://baidu.com/
+site_url: https://lixiaoqi-LXQ.github.io
+site_description: The name `Qlog` is inspired by Dlog.
+
+theme: material
+
+# Left bottom
+copyright: Copyright &copy; 2022 李晓奇 # 左下角的版权声明
+
+
 nav:
   - D: index.md
   - Q: about.md
-theme: material
 
-
+markdown_extensions:
+  - pymdownx.arithmatex: # latex支持
+      generic: true
+extra_javascript:
+  # latex支持
+  - mkdocs/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # https://cdn.bytedance.com/?query=mathjax&version=3.2.0
+extra_css:
+  - mkdocs/css/no-footer.css # 不使用底部的翻页
+  - mkdocs/css/unordered-list-symbols.css
