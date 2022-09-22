@@ -10,8 +10,10 @@ copyright: Copyright &copy; 2022 李晓奇 # 左下角的版权声明
 
 
 nav:
-  - D: index.md
-  - Q: about.md
+  - Qlog: index.md
+  # - Q: about.md
+  - 随机思考:
+    - 9.19: jottings/220919.md
 
 markdown_extensions:
   - pymdownx.arithmatex: # latex支持
