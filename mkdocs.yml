@@ -49,10 +49,19 @@ nav:
     - NETWORK:
       - HW1: HW/HW1.md
       - HW2: HW/HW2.md
+  - 相册:
+    - DCIM/index.md
+    - 2022.09:
+      - DCIM/22_09/index.md
 
 markdown_extensions:
   - admonition # `!!! note` syntax
   - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.tasklist:
+      # custom_checkbox: true
+      clickable_checkbox: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.superfences:
@@ -60,6 +69,9 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 extra_javascript:
   - mkdocs/javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -67,4 +79,14 @@ extra_javascript:
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
   - mkdocs/css/unordered-list-symbols.css
+  - stylesheets/extra.css
+plugins:
+   - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      width: 100%
+      height: 100vh
+      zoomable: true
+      draggable: true
 
