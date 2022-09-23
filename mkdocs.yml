@@ -9,9 +9,10 @@ theme:
   logo: img/touxiang.png
   favicon: img/favicon.ico
   features:
-    - navigation.instant
+    # - navigation.instant
     - navigation.tracking
     - navigation.tabs
+    - navigation.indexes
     # hence the back-to-top is there, there's no need for sticky tabs!
     # Improvement for vision and sacrifice on user experience
     # - navigation.tabs.sticky
@@ -42,11 +43,11 @@ copyright: Copyright &copy; 2022 李晓奇 # 左下角的版权声明
 
 
 nav:
-  - Qlog: index.md
   - 随机思考:
-    - 9.19: jottings/220919.md
+    - jottings/index.md
+    - 九月份: jottings/22_09.md
   - HW:
-    - NETWORK:
+    - 计网:
       - HW1: HW/HW1.md
       - HW2: HW/HW2.md
   - 相册:
