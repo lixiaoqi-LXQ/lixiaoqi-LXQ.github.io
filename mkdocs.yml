@@ -54,6 +54,9 @@ nav:
     - DCIM/index.md
     - 2022.09:
       - DCIM/22_09/index.md
+    - 2022国庆节:
+      - DCIM/22_nationalday/index.md
+
 
 markdown_extensions:
   - admonition # `!!! note` syntax

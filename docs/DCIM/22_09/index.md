@@ -5,5 +5,3 @@
 
 <img src="3.jpg" title="" alt="" width="234">
 <img src="4.jpg" title="" alt="" width="246">
-
-
