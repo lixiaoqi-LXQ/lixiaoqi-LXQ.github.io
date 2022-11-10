@@ -43,20 +43,24 @@ copyright: Copyright &copy; 2022 李晓奇 # 左下角的版权声明
 
 
 nav:
-  - 随机思考:
-    - jottings/index.md
-    - 九月份: jottings/22_09.md
-    - 十月份: jottings/22_10.md
-  - HW:
-    - 计网:
-      - HW1: HW/HW1.md
-      - HW2: HW/HW2.md
-  - 相册:
-    - DCIM/index.md
-    - 2022.09:
-      - DCIM/22_09/index.md
-    - 2022国庆节:
-      - DCIM/22_nationalday/index.md
+  # - 随机思考:
+    # - jottings/index.md
+    # - 九月份: jottings/22_09.md
+    # - 十月份: jottings/22_10.md
+  # - HW:
+    # - 计网:
+      # - HW1: HW/HW1.md
+      # - HW2: HW/HW2.md
+  # - 相册:
+    # - DCIM/index.md
+    # - 2022.09:
+      # - DCIM/22_09/index.md
+    # - 2022国庆节:
+      # - DCIM/22_nationalday/index.md
+  - 折腾记录:
+    - 搭建交叉编译环境: dirty/cross_compiler.md
+  - 想做的事:
+    - TODO/index.md
 
 
 markdown_extensions:
