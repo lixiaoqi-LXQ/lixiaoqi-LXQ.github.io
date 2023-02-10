@@ -1,8 +1,6 @@
 # 冬武功
 
-:heart_eyes_cat: :two_hearts: :two_hearts:
-
-> 建议电脑阅读，方便点击连接！
+> 
 
 TODO：
 
@@ -11,8 +9,6 @@ TODO：
 - 去协会借装备
 
 - 完善预算计划
-
-[TOC]
 
 ![](figures/scenery1.jpg)
 
