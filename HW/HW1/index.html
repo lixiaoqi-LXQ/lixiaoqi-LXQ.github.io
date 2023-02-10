@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="The name `Qlog` is inspired by Dlog." name="description"/>
+<link href="https://lixiaoqi-LXQ.github.io/HW/HW1/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.12" name="generator"/>
+<title>HW1 - Qlog</title>
+<link href="../../assets/stylesheets/main.0d440cfe.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../mkdocs/css/no-footer.css" rel="stylesheet"/>
+<link href="../../mkdocs/css/unordered-list-symbols.css" rel="stylesheet"/>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Qlog" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Qlog">
+<img alt="logo" src="../../img/touxiang.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Qlog
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              HW1
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="切换至夜间模式" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="切换至夜间模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"></path></svg>
+</label>
+<input aria-label="切换至日间模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="white" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="切换至日间模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dirty/cross_compiler/">
+        折腾记录
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../TODO/">
+        想做的事
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Qlog" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Qlog">
+<img alt="logo" src="../../img/touxiang.png"/>
+</a>
+    Qlog
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          折腾记录
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          折腾记录
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dirty/cross_compiler/">
+        搭建交叉编译环境
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dirty/talk_cut/">
+        访谈视频总结
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dirty/happy_workout/">
+        冬日健身整活视频
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../outdoor/outline/">
+        徒步规划
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dirty/vim_conf/">
+        neovim配置指南
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../TODO/">想做的事</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          想做的事
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<p><strong>R1</strong></p>
+<p>主机和端系统可以看作同一事物，细微的差别在于，端系统是一个抽象的概念，主机是实例。常见的端系统有PC、手机、web服务器、智能家具等等。</p>
+<hr/>
+<p><strong>R9</strong></p>
+<table>
+<thead>
+<tr>
+<th>接入网技术</th>
+<th>传输速率范围</th>
+<th>共享/专用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>拨号调制解调器</td>
+<td>56kbps</td>
+<td>专用</td>
+</tr>
+<tr>
+<td>HFC</td>
+<td>42.8Mbps下行速率、30.7 Mbps上行速率</td>
+<td>共享</td>
+</tr>
+<tr>
+<td>DSL</td>
+<td>24 Mbps下行速率、2.5 Mbps上行速率</td>
+<td>专用</td>
+</tr>
+<tr>
+<td>FTTH</td>
+<td>可高达千兆每秒</td>
+<td>专用</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p><strong>R11</strong></p>
+<p><span class="arithmatex">\(\frac L {R_1}+\frac L {R_2}\)</span></p>
+<hr/>
+<p><strong>R12</strong></p>
+<p>与分组交换相比，电路交换具有更强的专用性、稳定性。在电路交换中，FDM需要分离不同频段的信号，实现起来比TDM复杂。</p>
+<hr/>
+<p><strong>R13</strong></p>
+<ol>
+<li>
+<p>使用电路交换，需要预留两条1Mbps的链路，所以只能支持两个用户</p>
+</li>
+<li>
+<p>如果使用分组交换：</p>
+<ul>
+<li>
+<p>当2个用户同时在线时，最高负载量在2Mbps，在链路速率之内，分组可以被及时转发出去，所以基本没有排队时延</p>
+</li>
+<li>
+<p>当3个用户同时在线时，可能存在三者同时传输的情况，此时链路负载为3Mbps，超出链路速率，分组会被阻塞，这种情况下存在时延</p>
+</li>
+<li>
+<p>20%</p>
+</li>
+<li>
+<p>三个用户同时传输的概率：<span class="arithmatex">\((20\%)^3=0.8\%\)</span>，因此队列增长的时间比率为<span class="arithmatex">\(0.8\%\)</span></p>
+</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<p><strong>R18</strong></p>
+<div class="arithmatex">\[
+T_{prop}=\frac{2500km}{2.5\times10^8m/s}=10ms \\
+\]</div>
+<p>所以用时10ms</p>
+<p>一般情况：<span class="arithmatex">\(T=\frac d s\)</span>，传输速率决定的是泵出比特的速度，传播时延与之无关。</p>
+<hr/>
+<p><strong>R19</strong></p>
+<ol>
+<li>
+<p>吞吐量受限于瓶颈链路的速率，故吞吐量是500kbps</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac{4MB}{500kbps}=\frac{4\times10^6\times8bits}{500\times10^3bps}=64s\)</span></p>
+</li>
+<li>
+<p>吞吐量：100kbps。传输用时：<span class="arithmatex">\(5\times64s=320s\)</span></p>
+</li>
+</ol>
+<hr/>
+<p><strong>R23</strong></p>
+<p>因特网协议栈，自顶向下：应用层、传输层、网络层、链路层、物理层。</p>
+<ul>
+<li>
+<p>应用层：在网络应用进程之间传输报文(message)</p>
+</li>
+<li>
+<p>传输层：在应用程序端点间传送应用层报文，产生传输层的分组，报文段(segment)</p>
+</li>
+<li>
+<p>网络层：将数据报(datagram)从一个主机转移到另一台主机</p>
+</li>
+<li>
+<p>链路层：将数据以帧(frame)为单位传递给下一个节点</p>
+</li>
+<li>
+<p>物理层：将比特从一个节点转移到下一个节点</p>
+</li>
+</ul>
+<hr/>
+<p><strong>R25</strong></p>
+<p>Router处理层次：物理层、链路层、网络层</p>
+<p>Switch处理层次：物理层、链路层</p>
+<p>主机处理层次：应用层、传输层、网络层、链路层、物理层</p>
+<hr/>
+<p><strong>P2</strong></p>
+<p>第一段链路发送前<span class="arithmatex">\(P-1\)</span>个用时：<span class="arithmatex">\((P-1)\frac L R\)</span></p>
+<p>最后一个分组走过全部链路用时：<span class="arithmatex">\(N\frac L R\)</span></p>
+<p>因此端到端时延：<span class="arithmatex">\((N+P-1)\frac L R\)</span></p>
+<hr/>
+<p><strong>P3</strong></p>
+<ol>
+<li>
+<p>由于数据产生比较稳定，生成频率高，所以符合电路交换的特点，使用电路交换可以提供优秀的稳定性。此外长期使用也不会担心建立、销毁电路带来的时间开销。</p>
+</li>
+<li>
+<p>数据传输速率小于链路最大吞吐量，所以不会有阻塞发生，因此不需要拥塞控制。</p>
+</li>
+</ol>
+<hr/>
+<p><strong>P6</strong></p>
+<ol>
+<li>
+<p><span class="arithmatex">\(d_{prop}=\frac m s\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(d_{trans}=\frac L R\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(d=d_{prop}+d_{trans}=\frac m s +\frac L R\)</span></p>
+</li>
+<li>
+<p>经过时间<span class="arithmatex">\(d_{trans}\)</span>，分组刚刚被完全传输，即最后1个bit在链路起点处</p>
+</li>
+<li>
+<p>仍在链路中传输</p>
+</li>
+<li>
+<p>已经被接收端接收</p>
+</li>
+<li>
+<div class="arithmatex">\[
+   d_{prop}=d_{trans}\\
+\frac m s = \frac L R\\
+m = \frac {Ls} R \approx 535.7km
+   \]</div>
+</li>
+</ol>
+<hr/>
+<p><strong>P14</strong></p>
+<ol>
+<li>
+<p><span class="arithmatex">\(d=d_{queue} + d_{trans}=\frac{IL}{R(1-I)}+\frac L R=\frac L {(1-I)R}\)</span></p>
+</li>
+<li>
+<p>由(1)：<span class="arithmatex">\(d=\frac L R\cdot\frac 1 {1-a\cdot\frac L R}=\frac 1 a(\frac 1 {1-a\cdot\frac L R} - 1)\)</span></p>
+</li>
+</ol>
+<p><a class="glightbox" data-desc-position="bottom" data-height="100vh" data-width="100%" href="/home/lixiaoqi/.config/marktext/images/2022-09-06-23-49-53-image.png"><img alt="" src="/home/lixiaoqi/.config/marktext/images/2022-09-06-23-49-53-image.png"/></a></p>
+<hr/>
+<p><strong>P22</strong></p>
+<p>被成功接收，则N条链路都不丢包，概率为<span class="arithmatex">\((1-p)^N\)</span></p>
+<p>记<span class="arithmatex">\(q=(1-p)^N\)</span>，X为重传次数，则<span class="arithmatex">\(X+1\sim G(q)\)</span></p>
+<p><span class="arithmatex">\(E[X+1]=E X+1=\frac 1 q=\frac 1 {(1-p)^N}\)</span></p>
+<p>故重传次数的期望值是<span class="arithmatex">\(\frac 1 {(1-p)^N}-1\)</span></p>
+<hr/>
+<p><strong>P25</strong></p>
+<ol>
+<li><span class="arithmatex">\(t_{prop}=\frac{20000km}{2.5\times10^8m/s}=80ms\)</span></li>
+</ol>
+<p><span class="arithmatex">\(R\cdot t_{prop}=0.16MB\)</span></p>
+<ol>
+<li>
+<p>在第一个比特刚好传播到主机B时，耗时<span class="arithmatex">\(t_{prop}\)</span>，此时一共传输了<span class="arithmatex">\(R\cdot t_{prop}\)</span>个比特，即<span class="arithmatex">\(0.16MB&lt;0.8MB\)</span>，即链路上具有的比特最大数量最大值是<span class="arithmatex">\(0.16MB\)</span></p>
+</li>
+<li>
+<p>链路满负荷时，整条链路上具有的比特最大值。</p>
+</li>
+<li>
+<p>满负荷时，比特的平均宽度是：<span class="arithmatex">\(\frac{20000km}{0.16MB}=125m/bit\)</span>，大于足球场的标准长度。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac s R\)</span></p>
+</li>
+</ol>
+<hr/>
+<p><strong>P27</strong></p>
+<ol>
+<li>
+<p><span class="arithmatex">\(R\cdot t_{prop}=1Gbps\times80ms=80MB\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(0.8MB\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(0.25m\)</span></p>
+</li>
+</ol>
+<hr/>
+<p><strong>P31</strong></p>
+<table>
+<thead>
+<tr>
+<th>L/bit</th>
+<th>L'/bit</th>
+<th>R/Mbps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(8\times10^6\)</span></td>
+<td><span class="arithmatex">\(10\ 000\)</span></td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>N</th>
+<th>P</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>800</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>从源主机到第一台分组交换机耗时：<span class="arithmatex">\(\frac L R=4s\)</span></li>
+</ol>
+<p>端到端延时：<span class="arithmatex">\(N\frac L R=12s\)</span></p>
+<ol>
+<li>从源主机移动一个分组到第一台分组交换机耗时：<span class="arithmatex">\(\frac {L'}R=5ms\)</span></li>
+</ol>
+<p>从第一台交换机发送第一个分组到第二台交换机耗时：<span class="arithmatex">\(5ms\)</span></p>
+<p>从源主机发送第二个分组到第一台交换机耗时：<span class="arithmatex">\(5ms\)</span></p>
+<p><span class="arithmatex">\(10ms\)</span>后第二个分组可以被第一台交换机全部收到</p>
+<ol>
+<li>传输文件总用时：<span class="arithmatex">\((N+P-1)\frac {L'} R=4.01s\)</span></li>
+</ol>
+<p>可见分段传输产生的时延要显著小于不分段传输。</p>
+<p>细粒度的分段相当于提高了数据传输的并行度。不分段时，其他几段链路处于空闲状态，而分段粒度足够细时，每条链路都在传输，相当于有N倍的并行度。对于本例，有三段链路，所以分段时延接近于不分段的三分之一。</p>
+<ol>
+<li>
+<ul>
+<li>
+<p>分段使得提高了错误容忍度。假设不分段传输大文件，其中几个比特的错误就会导致整个文件重传，而分段传输则可以减少这种代价。</p>
+</li>
+<li>
+<p>分段还使得链路传输资源可以被公平地占用，避免特大文件阻塞许多小文件，造成其他用户/进程的不必要等待。</p>
+</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>
+<p>将数据分段和合并的处理时延可能会比较大。</p>
+</li>
+<li>
+<p>伴随着封装分段的头部</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr/>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2022 李晓奇
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
+<script src="../../mkdocs/javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

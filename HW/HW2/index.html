@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="The name `Qlog` is inspired by Dlog." name="description"/>
+<link href="https://lixiaoqi-LXQ.github.io/HW/HW2/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.12" name="generator"/>
+<title>HW2 - Qlog</title>
+<link href="../../assets/stylesheets/main.0d440cfe.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../mkdocs/css/no-footer.css" rel="stylesheet"/>
+<link href="../../mkdocs/css/unordered-list-symbols.css" rel="stylesheet"/>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="cyan" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#hw2">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Qlog" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Qlog">
+<img alt="logo" src="../../img/touxiang.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Qlog
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              HW2
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="切换至夜间模式" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="切换至夜间模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"></path></svg>
+</label>
+<input aria-label="切换至日间模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="white" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="切换至日间模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../dirty/cross_compiler/">
+        折腾记录
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../TODO/">
+        想做的事
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Qlog" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Qlog">
+<img alt="logo" src="../../img/touxiang.png"/>
+</a>
+    Qlog
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          折腾记录
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          折腾记录
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dirty/cross_compiler/">
+        搭建交叉编译环境
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dirty/talk_cut/">
+        访谈视频总结
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dirty/happy_workout/">
+        冬日健身整活视频
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../outdoor/outline/">
+        徒步规划
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../dirty/vim_conf/">
+        neovim配置指南
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../TODO/">想做的事</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          想做的事
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r4">
+    R4
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r5">
+    R5
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r6">
+    R6
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r9">
+    R9
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p1">
+    P1
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p5">
+    P5
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r13">
+    R13
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r16">
+    R16
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p9">
+    P9
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p10">
+    P10
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r19">
+    R19
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r22">
+    R22
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r23">
+    R23
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p11">
+    P11
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p22">
+    P22
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r26">
+    R26
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p23">
+    P23
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p24">
+    P24
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="hw2">HW2</h1>
+<h2 id="r4">R4</h2>
+<p>不同意，因为P2P文件共享中，一个用户既可能作为客户端从其他用户处下载文件，也可以作为服务器端为他人提供文件片段。</p>
+<h2 id="r5">R5</h2>
+<p>主机地址(IP)+进程标识符(port number)</p>
+<h2 id="r6">R6</h2>
+<p>UDP。因为UDP不需要TCP协议的三次握手，能够尽快收到响应。</p>
+<h2 id="r9">R9</h2>
+<blockquote>
+<p>这里中文译本：强化UDP</p>
+<p>英文原版：<em>wants TCP to be enhanced</em></p>
+<p>以英文版为准</p>
+</blockquote>
+<p>SSL在应用层。</p>
+<p>SSL的工作原理是：应用程序将明文传递给SSL套接字，SSL服务将其加密后传递给TCP套接字，经过网络传输，报文到达目标主机的TCP套接字，传递给SSL，解密后通过SSL套接字传递给接受进程。</p>
+<p>因此程序研制者想利用SSL来强化TCP，需要向SSL发送明文数据，加密工作将有SSL服务完成。</p>
+<h2 id="p1">P1</h2>
+<ol>
+<li>
+<p>错。根据HTTP协议，服务器在一次应答中只返回一个响应报文，用户需要根据页面中的链接再次请求对象。</p>
+</li>
+<li>
+<p>对。因为主机可能一致，就可以通过持续连接的HTTP连续发送。</p>
+</li>
+<li>
+<p>错。同1，每个TCP报文只包含至多一个HTTP对象。</p>
+</li>
+<li>
+<p>错。Date：首部行指示服务器产生并发送响应报文的日期与时间。</p>
+</li>
+<li>
+<p>错。如HEAD方法对应的响应报文实体体为空。</p>
+</li>
+</ol>
+<h2 id="p5">P5</h2>
+<ol>
+<li>
+<p>能。Date：Tue, 07 Mar 2008 12:39:45GMT</p>
+</li>
+<li>
+<p>Last-Modified: Sat, 10 Dec2005 18:27:46 GMT</p>
+</li>
+<li>
+<p>3874</p>
+</li>
+<li>
+<p>前5个字节：<code>&lt;!doc</code></p>
+</li>
+</ol>
+<p>同意持续连接</p>
+<h2 id="r13">R13</h2>
+<p>请求对象的总响应时间由三个部分组成：</p>
+<ul>
+<li>
+<p>局域网时延</p>
+</li>
+<li>
+<p>接入时延</p>
+</li>
+<li>
+<p>因特网时延</p>
+</li>
+</ul>
+<p>在接入链路带宽较小时，会导致接入链路成为速度瓶颈，使得接入时延较大。</p>
+<p>如果网络核心的某些因素(如网络拥挤、物理链路限制等)导致因特网时延比较大，也会使总响应时间很大。</p>
+<p>加入Web缓存就使得命中的请求只在局域网内部传输，局域网的链路带宽通常不会成为瓶颈；另一方面，未命中的对象请求只占一部分，这样得到的总响应时间期望值会远远小于原值，同时有利于减轻互联网负担。</p>
+<p>理论上，Web缓存器能减少用户请求的所有对象的时延。因为Web缓存器的存在使得网络流量下降，所以即使是对于未命中的情况，响应时延也会有所下降。</p>
+<h2 id="r16">R16</h2>
+<pre class="mermaid"><code>flowchart LR
+    A[User Agent for Alice]
+    B[User Agent for Bob]
+    M1[Mail Server 1]
+    M2[Mail Server 2]
+    A--&gt;|HTTP|M1--&gt;|SMTP|M2--&gt;|POP3|B</code></pre>
+<h2 id="p9">P9</h2>
+<blockquote>
+<p>这里中文译本：命中率0.4</p>
+<p>英文原版：<em>miss rate is 0.4</em></p>
+<p>以英文版为准</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>L(MB)</th>
+<th>a(个/秒)</th>
+<th>R(Mbps)</th>
+<th>平均因特网时延(s)</th>
+<th>平均接入时延</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.85</td>
+<td>16</td>
+<td>15</td>
+<td>3</td>
+<td><span class="arithmatex">\(\triangle/(1-\triangle\beta)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="arithmatex">\(\triangle=L/R=\frac{0.85MB}{15Mbps}\approx0.567s\)</span></p>
+<p><span class="arithmatex">\(\beta=16\)</span></p>
+<p>所以平均接入时延是<span class="arithmatex">\(\triangle/(1-\triangle\beta)=\frac{0.567}{1-0.567\times16}\approx0.607s\)</span></p>
+<p>因此总的平均响应时间为：<span class="arithmatex">\(3s+0.607s=3.607s\)</span></p>
+<p>安装了Web缓存器后：</p>
+<ul>
+<li>
+<p>命中部分，<span class="arithmatex">\(delay=0s\)</span></p>
+</li>
+<li>
+<p>未命中部分，重新计算平均接入时延</p>
+</li>
+</ul>
+<p><span class="arithmatex">\(\triangle/(1-\triangle\beta')=\frac{0.567}{1-0.567\times16\times0.4}\approx0.089s\)</span></p>
+<p>此时平均响应时间为：<span class="arithmatex">\(3s+0.089s=3.089s\)</span></p>
+<p>故总的响应时间变为：<span class="arithmatex">\(0s\times0.6+0.124s\times0.4\approx1.24s\)</span></p>
+<h2 id="p10">P10</h2>
+<p>因为是只有10m长的短链路，所以传播时延可以忽略不计，只考虑传输时延。</p>
+<p><strong>持续连接</strong></p>
+<ul>
+<li>
+<p>第一次接收数据：<span class="arithmatex">\(200bit/150bps\times3+10^5bit/150bps\)</span></p>
+</li>
+<li>
+<p>使用同一连接先后接收另外10个引用：<span class="arithmatex">\(10\times(200bit/150bps+10^5bit/150bps)\)</span></p>
+</li>
+<li>
+<p>求和得到结果：<span class="arithmatex">\(7350.7s\)</span></p>
+</li>
+</ul>
+<p><strong>非持续连接</strong></p>
+<ul>
+<li>
+<p>第一次接收数据：<span class="arithmatex">\(200bit/150bps\times3+10^5bit/150bps\)</span></p>
+</li>
+<li>
+<p>10个并发的过程(建立连接+控制报文+接收文件)，此时带宽被共享，只剩<span class="arithmatex">\(15bps\)</span></p>
+</li>
+</ul>
+<p><span class="arithmatex">\(200bit/15bps\times3+10^5bit/15bps\)</span></p>
+<ul>
+<li>求和得到结果：<span class="arithmatex">\(7377.3s\)</span></li>
+</ul>
+<p>综上分析可知：</p>
+<ol>
+<li>
+<p>并行下载一来不削减链路负载，二来链路带宽被均匀共享，所以并没有意义。</p>
+</li>
+<li>
+<p>持续连接带来的收益主要是更少的连接建立时期的控制报文，但是由于此案例中，控制报文的长度和数据报文相比微不足道，所以持续连接并没有带来很大增益。</p>
+</li>
+</ol>
+<h2 id="r19">R19</h2>
+<p>可以。邮件服务器的别名记录，具有MX类型。</p>
+<h2 id="r22">R22</h2>
+<p>其他对等方选择传输对象时，会周期性地选择随机邻居发送对象，这样Alice就有机会获得初始文件块。</p>
+<h2 id="r23">R23</h2>
+<p>覆盖网络是参与进P2P文件共享系统中的节点以及节点间的逻辑连边组成的。如果两个节点之间存在TCP连接，则认为两个节点间存在一条边。覆盖网络不包含路由器。</p>
+<h2 id="p11">P11</h2>
+<ol>
+<li>
+<p>可以。因为总并行量为4个其他用户的非并行连接+Bob的若干并行连接，即并行连接为Bob争取了更大的带宽。</p>
+</li>
+<li>
+<p>由于并行连接均等共享带宽，所以提高并行量可以为自己争取更大的带宽，因此Bob保持并行连接将为他避免带宽被其他用户抢占过多。</p>
+</li>
+</ol>
+<h2 id="p22">P22</h2>
+<div class="arithmatex">\[
+D_{cs}=max\{\frac {NF}{u_s},\frac F{d_{min}}\}\\
+D_{p2p}=max\{\frac {F}{u_s},\frac F{d_{min}},\frac{NF}{u_s+\sum d_i}\}\\
+\]</div>
+<table>
+<thead>
+<tr>
+<th>组合(N,u)</th>
+<th>c/s(s)</th>
+<th>p2p(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(10, 300kbps)</td>
+<td>7680.0</td>
+<td>7680.0</td>
+</tr>
+<tr>
+<td>(10, 700kbps)</td>
+<td>7680.0</td>
+<td>7680.0</td>
+</tr>
+<tr>
+<td>(10, 2Mbps)</td>
+<td>7680.0</td>
+<td>7680.0</td>
+</tr>
+<tr>
+<td>(100, 300kbps)</td>
+<td>51200.0</td>
+<td>25903.6</td>
+</tr>
+<tr>
+<td>(100, 700kbps)</td>
+<td>51200.0</td>
+<td>15616.2</td>
+</tr>
+<tr>
+<td>(100, 2Mbps)</td>
+<td>51200.0</td>
+<td>7680.0</td>
+</tr>
+<tr>
+<td>(1000, 300kbps)</td>
+<td>512000.0</td>
+<td>47558.8</td>
+</tr>
+<tr>
+<td>(1000, 700kbps)</td>
+<td>512000.0</td>
+<td>21524.9</td>
+</tr>
+<tr>
+<td>(1000, 2Mbps)</td>
+<td>512000.0</td>
+<td>7680.0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="r26">R26</h2>
+<p>TCP服务器需要一个欢迎socket，用来与尝试连接的客户端主机进行握手，在连入一个用户后为这个用户的服务单独分配一个socket，所以需要两个socket。</p>
+<p>而UDP对于所有连接都只使用一个socket通信。</p>
+<p>当TCP服务器同时为n条连接服务时，需要n+1个socket。</p>
+<h2 id="p23">P23</h2>
+<ol>
+<li>
+<p>服务器以<span class="arithmatex">\(\frac{u_s}{N}\)</span>的速率向<span class="arithmatex">\(N\)</span>个对等方同时发送</p>
+</li>
+<li>
+<p>服务器以<span class="arithmatex">\(d_{min}\)</span>的速率向<span class="arithmatex">\(N\)</span>个对等方同时发送</p>
+</li>
+<li>
+<p>一般情况下，服务器可以向多个对等方并行传输，带宽被均分。最佳情况下，网络核心的带宽足够大，且收发两侧都竭尽全力。</p>
+</li>
+</ol>
+<p>此时：</p>
+<ul>
+<li>
+<p>若服务器上载带宽充足，则用户下载带宽为瓶颈，耗用时间<span class="arithmatex">\(\frac F{d_{min}}\)</span></p>
+</li>
+<li>
+<p>若用户数量庞大，使得服务器上载带宽成为瓶颈，耗用时间<span class="arithmatex">\(\frac{NF}{u_s}\)</span></p>
+</li>
+</ul>
+<p>文件分发分为上传和下载，都要完成，所以取两者最大值作为最小分发时间。</p>
+<h2 id="p24">P24</h2>
+<ol>
+<li><span class="arithmatex">\(u_s\le(u_s+u_1+\dots+u_N)/N\Rightarrow(N-1)u_s\le(u_1+\dots+u_N)\)</span></li>
+</ol>
+<p>记<span class="arithmatex">\(u=u_1+\dots+u_N\)</span></p>
+<p>服务器将文件划分为<span class="arithmatex">\(N\)</span>个小块，每块的大小是<span class="arithmatex">\(s_i=\frac{u_i}u\cdot F\)</span>。第<span class="arithmatex">\(i\)</span>块文件以速率<span class="arithmatex">\(u_{si}=\frac{u_i}u\cdot u_s\)</span>分发给第<span class="arithmatex">\(i\)</span>个节点。这时服务器的上载链路满载</p>
+<p>当第<span class="arithmatex">\(i\)</span>个节点接收到文件开始，也以速率<span class="arithmatex">\(s_i\)</span>向其他<span class="arithmatex">\(N-1\)</span>个节点转发文件块，第<span class="arithmatex">\(i\)</span>个节点的总上载速度是<span class="arithmatex">\((N-1)s_i=\frac{(N-1)u_s}{u}\cdot u_i\le u_i\)</span></p>
+<p>当服务器分发完文件时，各对等节点也已经将自身接收到的文件块共享给其他对等节点。所以此时分发时间是<span class="arithmatex">\(\frac F{u_s}\)</span></p>
+<ol>
+<li>
+<p>类似上述，改为：</p>
+<ul>
+<li>服务器将文件拆分为<span class="arithmatex">\(N+1\)</span>个块，比例是：<span class="arithmatex">\(\frac{u_1}{N-1}:\frac{u_2}{N-1}:\dots:\frac{u_N}{N-1}:(u_s-\frac u{N-1})/N\)</span></li>
+</ul>
+<p>并以速率<span class="arithmatex">\(u_{si}=\frac{u_i}{N-1}\)</span>向第<span class="arithmatex">\(i\)</span>个对等节点分发文件块<span class="arithmatex">\(i\)</span>，以速率<span class="arithmatex">\(u_{sN+1}=(u_s-\frac u{N-1})/N\)</span>向全部<span class="arithmatex">\(N\)</span>个对等节点发送文件块<span class="arithmatex">\(N+1\)</span></p>
+<p>则总上载速率<span class="arithmatex">\(u_{s1}+\dots+u_{sN}+N\cdot u_{sN+1}= u_s\)</span></p>
+<ul>
+<li>第<span class="arithmatex">\(i\)</span>个节点接收到文件块，立刻以速率<span class="arithmatex">\(\frac{u_i}{N-1}\)</span>向其余<span class="arithmatex">\(N-1\)</span>个节点转发，其上载链路正好满载</li>
+</ul>
+</li>
+</ol>
+<p>如此，第<span class="arithmatex">\(i\)</span>个节点接受文件的速度之和是：</p>
+<p><span class="arithmatex">\(u_{si}+u_{sN+1}+\sum_{j\neq i}\frac{u_j}{N-1}=\frac{u+u_s}N\)</span></p>
+<p>所以总的分发时间是<span class="arithmatex">\(F/\frac{u+u_s}N=\frac{NF}{u+u_s}\)</span></p>
+<ol>
+<li>综合以上两种情况，分别对应服务器上载链路带宽不足和整个网络满载的情况，所以得到最小分发时间取二者最大值。</li>
+</ol>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2022 李晓奇
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
+<script src="../../mkdocs/javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
